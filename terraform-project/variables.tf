@@ -38,5 +38,5 @@ variable "iam_users" {
     offboarding_group     = string
   }))
   description = "IAM 用户列表，用于用户全生命周期管理（入职/转岗/离职）"
-  default     = []
+  default     = [] #...
 }
