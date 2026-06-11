@@ -11,9 +11,9 @@
 # 避免与 providers.local.tf 中的默认 provider 配置发生 "Duplicate provider configuration" 冲突。
 # 如需在 CI 中使用，请在此处启用以下配置（删除注释），并删除 providers.local.tf。
 #
-# provider "volcenginecc" {
-#   region = "cn-guilin-boe"
-#   endpoints = {
-#     cloudcontrolapi = "open.stable.volcengineapi-test.com"
-#   }
-# }
+provider "volcenginecc" {
+  region = "cn-guilin-boe"
+  endpoints = {
+    cloudcontrolapi = "open.stable.volcengineapi-test.com"
+  }
+}
