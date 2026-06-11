@@ -3,7 +3,7 @@ terraform {
   required_providers {
     volcenginecc = {
       source  = "volcengine/volcenginecc"
-      version = "~> 0.0.50"
+      version = "~> 0.0.48"
     }
   }
 }
