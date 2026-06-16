@@ -18,24 +18,24 @@ variable "region" {
 # ==============================================
 variable "iam_users" {
   type = list(object({
-    user_name             = string
-    display_name          = string
-    description           = string
-    email                 = string
-    mobile_phone          = string
-    groups                = list(string)
-    policies              = list(object({ policy_name = string, policy_type = string }))
-    tags                  = list(object({ key = string, value = string }))
-    enable_login          = bool
-    login_allowed         = bool
-    password              = string
-    password_reset_required = bool
-    safe_auth_flag        = bool
-    safe_auth_type        = string
-    enable_access_key     = bool
-    access_key_status     = string
-    is_offboarding        = bool
-    offboarding_group     = string
+    user_name               = string
+    display_name            = optional(string, "")
+    description             = optional(string, "")
+    email                   = optional(string, "")
+    mobile_phone            = optional(string, "")
+    groups                  = optional(list(string), [])
+    policies                = optional(list(object({ policy_name = string, policy_type = string })), [])
+    tags                    = optional(list(object({ key = string, value = string })), [])
+    enable_login            = optional(bool, false)
+    login_allowed           = optional(bool, false)
+    password                = optional(string, "")
+    password_reset_required = optional(bool, false)
+    safe_auth_flag          = optional(bool, false)
+    safe_auth_type          = optional(string, "")
+    enable_access_key       = optional(bool, false)
+    access_key_status       = optional(string, "inactive")
+    is_offboarding          = optional(bool, false)
+    offboarding_group       = optional(string, "")
   }))
   description = "IAM 用户列表，用于用户全生命周期管理（入职/转岗/离职）"
   default     = [] #...
