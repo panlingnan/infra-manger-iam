@@ -1,5 +1,11 @@
 # 根模块输出定义
 
+# 所有创建的用户组
+output "iam_group_names" {
+  description = "所有创建的 IAM 用户组名称列表"
+  value       = [for name, g in module.iam_groups : g.user_group_name]
+}
+
 # 所有创建的用户信息
 output "iam_user_ids" {
   description = "所有创建的 IAM 用户 ID，key 为用户名"

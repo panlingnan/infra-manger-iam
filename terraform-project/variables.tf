@@ -5,7 +5,21 @@
 variable "region" {
   type        = string
   description = "火山引擎区域"
-  default     = "cn-guilin-boe"
+  default     = "cn-beijing"
+}
+
+# ==============================================
+# IAM 用户组管理
+# 集中声明所有会被 iam_users 引用的用户组
+# 包括业务用户组（如 infra-manager-user-group）和离职归档组（如 OffboardedUsers）
+# ==============================================
+variable "iam_groups" {
+  type = list(object({
+    user_group_name = string
+    description     = optional(string, "")
+  }))
+  description = "IAM 用户组列表，会被 iam_users 中的 groups / offboarding_group 引用"
+  default     = []
 }
 
 # ==============================================
