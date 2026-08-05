@@ -19,7 +19,7 @@ iam_users = [
   {
     user_name               = "user新入职1"
     display_name            = "新员工姓名"
-    description             = "员工描述"
+    description             = "员工描述update"
     email                   = "153@163.com"
     mobile_phone            = "15306554210"
     groups                  = ["infra-manager-user-group"]
