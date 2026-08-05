@@ -17,7 +17,7 @@ iam_groups = [
 
 iam_users = [
   {
-    user_name               = "user新入职12345"
+    user_name               = "user新入职1"
     display_name            = "新员工姓名"
     description             = "员工描述"
     email                   = "153@163.com"
@@ -45,7 +45,7 @@ iam_users = [
     offboarding_group       = "OffboardedUsers"
   },
   {
-    user_name               = "user新入职234"
+    user_name               = "user新入职2"
     display_name            = "新员工姓名"
     description             = "员工描述"
     email                   = "153@163.com"
@@ -78,7 +78,7 @@ iam_users = [
     #   2. 清空策略
     #   3. 禁用登录
     #   4. 处理访问密钥
-    user_name         = "离职员工用户名54321"
+    user_name         = "离职员工用户名3"
     is_offboarding    = true
     offboarding_group = "OffboardedUsers"
   }
